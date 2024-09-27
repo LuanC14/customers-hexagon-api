@@ -1,6 +1,5 @@
-package dev.luan.hca.adapters.out.client
+package dev.luan.hca.adapters.out.client.feign
 
-import dev.luan.hca.adapters.out.client.feign.AddressClientFeign
 import dev.luan.hca.adapters.out.client.feign.response.AddressResponse
 import dev.luan.hca.application.core.domain.AddressDto
 import dev.luan.hca.application.ports.out.AddressManagerPortOut

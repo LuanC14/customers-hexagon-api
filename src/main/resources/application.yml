@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: Hexagon Customers API
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      authentication-database: admin
+      username: root
+      password: example
+      database: hexagonal
+  cloud:
+    openfeign:
+      httpClient:
+        disable-ssl-validation: true
+        enabled: false
+      okhttp:
+        enabled: true  #Required to use PATCH
+      client:
+        config:
+          default:
+            connectTimeout: 30000
+            readTimeout: 30000
+            loggerLevel: full
+          address-api:
+            url: "${ADDRESS_API_URL:http://localhost:8089}"
+            read-timeout: 30000
+            connect-timeout: 30000
